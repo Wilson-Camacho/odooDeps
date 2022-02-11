@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# -*- hola-*-
 from odoo import models, fields, api
 
 class lista_tareas(models.Model):
@@ -9,7 +9,7 @@ class lista_tareas(models.Model):
 
 
     avatar = fields.Image("Imagen tarea", max_width=50, max_height = 50)
-    
+
     tarea = fields.Char()
     prioridad = fields.Integer()
     urgente = fields.Boolean(compute="_value_urgente", store=True)
