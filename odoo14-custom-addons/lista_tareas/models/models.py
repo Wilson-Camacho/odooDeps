@@ -9,6 +9,7 @@ class lista_tareas(models.Model):
 
 
     avatar = fields.Image("Imagen tarea", max_width=50, max_height = 50)
+    
 
     tarea = fields.Char()
     prioridad = fields.Integer()

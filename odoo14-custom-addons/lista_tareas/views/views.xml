@@ -7,10 +7,10 @@
       <field name="name">lista_tareas list</field>
       <field name="model">lista_tareas.lista_tareas</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree decoration-success= "realizada == True">
           <field name="avatar" widget="image" class = "be_avatar"/>
           <field name="tarea"/>
-          <field name="prioridad"/>
+          <field name="prioridad"  widget="percentpie"/>
           <field name="urgente"/>
           <field name="realizada"/>
 
