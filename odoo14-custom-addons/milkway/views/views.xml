@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
+
     <record model="ir.ui.view" id="milkway.list">
       <field name="name">milkway list</field>
       <field name="model">milkway.milkway</field>
@@ -13,24 +13,19 @@
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
+
     <record model="ir.actions.act_window" id="milkway.action_window">
       <field name="name">milkway window</field>
       <field name="res_model">milkway.milkway</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
-<!--
-    <record model="ir.actions.server" id="milkway.action_server">
-      <field name="name">milkway server</field>
-      <field name="model_id" ref="model_milkway_milkway"/>
-      <field name="state">code</field>
-      <field name="code">
+<!--milkway  
         action = {
           "type": "ir.actions.act_window",
           "view_mode": "tree,form",
@@ -41,20 +36,20 @@
 -->
 
     <!-- Top menu item -->
-<!--
+
     <menuitem name="milkway" id="milkway.menu_root"/>
--->
+
     <!-- menu categories -->
-<!--
+
     <menuitem name="Menu 1" id="milkway.menu_1" parent="milkway.menu_root"/>
     <menuitem name="Menu 2" id="milkway.menu_2" parent="milkway.menu_root"/>
--->
+
     <!-- actions -->
-<!--
-    <menuitem name="List" id="milkway.menu_1_list" parent="milkway.menu_1"
+
+    <menuitem name="Submenu1" id="milkway.menu_21" parent="milkway.menu_1"
               action="milkway.action_window"/>
-    <menuitem name="Server to list" id="milkway" parent="milkway.menu_2"
-              action="milkway.action_server"/>
--->
+    <menuitem name="Submenu2" id="milkway.menu_22" parent="milkway.menu_1"
+              action="milkway.action_window"/>
+
   </data>
 </odoo>
