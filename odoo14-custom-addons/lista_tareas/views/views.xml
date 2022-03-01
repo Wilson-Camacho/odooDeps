@@ -13,8 +13,12 @@
           <field name="prioridad"  widget="percentpie"/>
           <field name="urgente"/>
           <field name="realizada"/>
-
+          <!--Fila añadida-->
+          <field name="estado"/>
           <field name="fecha"/>
+          
+          <field name='descripcion'/>
+        
         </tree>
       </field>
     </record>

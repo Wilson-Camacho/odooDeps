@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 # -*- hola-*-
+from email.policy import default
 from odoo import models, fields, api
 
 class lista_tareas(models.Model):
@@ -15,7 +16,10 @@ class lista_tareas(models.Model):
     prioridad = fields.Integer()
     urgente = fields.Boolean(compute="_value_urgente", store=True)
     realizada = fields.Boolean()
-    
+    #Nuevo Campos.
+    descripcion = fields.Html('Descripción', sanitize=True, strip_style=False)
+    estado = fields.Selection(
+        [('no', 'Sin hacer'),('si','Hecho')], 'Estado', default = "no")
     fecha = fields.Date()
 
     @api.depends('prioridad')
