@@ -7,11 +7,18 @@
       <field name="name">lista_tareas list</field>
       <field name="model">lista_tareas.lista_tareas</field>
       <field name="arch" type="xml">
-        <tree>
+        <tree decoration-success= "realizada == True">
+          <field name="avatar" widget="image" class = "be_avatar"/>
           <field name="tarea"/>
-          <field name="prioridad"/>
+          <field name="prioridad"  widget="percentpie"/>
           <field name="urgente"/>
           <field name="realizada"/>
+          <!--Fila añadida-->
+          <field name="estado"/>
+          <field name="fecha"/>
+          
+          <field name='descripcion'/>
+        
         </tree>
       </field>
     </record>
@@ -37,9 +44,15 @@
     <!-- menu categories -->
 
     <menuitem name="Opciones Lista Tareas" id="lista_tareas.menu_1" parent="lista_tareas.menu_root"/>
+    <menuitem name="Community" id="lista_tareas.menu_3" parent="lista_tareas.menu_root"/>
 
+    <!-- Nuevas entradas de menu -->
+    <menuitem name="Local" id="lista_tareas.menu_2_list" parent="lista_tareas.menu_3"
+              action="lista_tareas.action_window"/>
+    <menuitem name="Global" id="lista_tareas.menu_3_list" parent="lista_tareas.menu_3"
+              action="lista_tareas.action_window"/>
+    
     <!-- actions -->
-
     <menuitem name="Mostrar lista" id="lista_tareas.menu_1_list" parent="lista_tareas.menu_1"
               action="lista_tareas.action_window"/>
 
